@@ -22,7 +22,6 @@ public class EstudianteDistancia extends Estudiante {
     }
 
     public void establecerPeorNota() {
-
         for (int i = 0; i < notas.size(); i++) {
             if(peorNota == 0){
                 peorNota = notas.get(i).obtenerValor();
