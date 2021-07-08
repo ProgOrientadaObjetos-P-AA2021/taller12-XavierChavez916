@@ -22,13 +22,16 @@ public class EstudianteDistancia extends Estudiante {
     }
 
     public void establecerPeorNota() {
-        double s = 10;
+        double aux = 0;
         for (int i = 0; i < notas.size(); i++) {
-            if (s > notas.get(i).obtenerValor()) {
-                s = notas.get(i).obtenerValor();
+            if(aux == 0){
+                aux = notas.get(i).obtenerValor();
+            }
+            if (aux > notas.get(i).obtenerValor()) {
+                aux = notas.get(i).obtenerValor();
             }
         }
-        peorNota = s;
+        peorNota = aux;
     }
 
     public void establecerPromedio() {
